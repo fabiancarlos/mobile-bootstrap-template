@@ -19,7 +19,9 @@ I want to create awesome apps with balance in high performance and beauty, or on
 * Template columns. (Like on Twitter Bootstrap with rows, col-lg-*, etc..)
 * Little coupling with other libraries and frameworks. (let the people to choose what they want)
 * Features such as to select number or a calendar.
-* Power to choose between high performance or awesome beauty
+* Create features with high performance.
+* Create features with awesome beauty.
+* Power to choose between performance or beauty.
 
 ## Contributing
 
