@@ -14,6 +14,22 @@ With advances in technology and more and more smartphones with high performance,
 
 I want to create awesome apps with balance in high performance and beauty, or one or another. And this is will be my collection of features to achieve that.
 
+## Features
+
+* Section, Nav 
+* Tabs
+* Buttons, group buttons
+* List, block list
+* Image 
+* Modal
+* Toggle button
+* Select
+* Checkbox button
+* Radio button
+* Range
+* Slide
+* Calendar
+
 ## Some objectives
 
 * Template columns. (Like on Twitter Bootstrap with rows, col-lg-*, etc..)
