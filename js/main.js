@@ -42,7 +42,7 @@ if (ios){
 
 var nav_section_height = nav_section_node_list.length > 0 ? nav_section_node_list[0].scrollHeight : null;
 
-// console.log(nav_section_node_list[0].scrollHeight);
+console.log("Nav Secton Height: ", nav_section_node_list[0].scrollHeight);
 
 /*** 
 	* SECTION CONTENT
@@ -65,26 +65,26 @@ var apply_section_content_height = function(){
 
 apply_section_content_height();
 
-// console.log(section_content.previousElementSibling.className);
+/* BUTTONS */
 
-if (section_content.previousElementSibling.className.indexOf('nav-section') === 0) {
-	var nav_section = section_content.previousElementSibling;
+var btns_node_list = document.getElementsByClassName('btn');
 
-	while(nav_section){
+for (var i = 0; i < btns_node_list.length; ++i){
 
-		console.log(nav_section.className );
+	if (btns_node_list[i].nodeType !== 1) break;
 
-		// if( nav_section.nodeType !== 1 ) break;
-
-		if (!nav_section.previousElementSibling) break;
-
-		if (nav_section.previousElementSibling.nodeType !== 1) break;
-
-		if (nav_section.previousElementSibling.className.indexOf('nav-section') === 0){
-			nav_section = nav_section.previousElementSibling;
-		}
-			
-		// if( nav_section.nodeType === 1 ) return nav_section;
-	}
-
+	/* buttons active */
+	btns_node_list[i].addEventListener('touchstart', function(){
+	  if(this.className.indexOf('active') === -1){
+	  	this.className = this.className + ' active';
+	  }
+	});
+	btns_node_list[i].addEventListener('touchend', function(){
+		this.className = this.className.replace('active', '');
+	});
+	/* fix when active is stuck bug */
+	btns_node_list[i].addEventListener('touchcancel', function(){
+		this.className = this.className.replace('active', '');
+	});
+  
 }

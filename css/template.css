@@ -1,28 +1,35 @@
 
 /* TEXT */
 
-h1{
+h1, h2, h3, h4, h5, h6{
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	line-height: 1.5em;
+}
 
+h1{
+	font-size: 1.8em;
 }
 
 h2{
-
+	font-size: 1.4em;
 }
 
 h3{
-
+	font-size: 1.2em;
 }
 
 h4{
-
+	font-size: 1em;
 }
 
 h5{
-
+	font-size: 0.8em;
 }
 
 h6{
-
+	font-size: 0.6em;
 }
 
 .legend-label{
@@ -35,6 +42,13 @@ h6{
 .nav-section{
 	width: 100%;
 	height: 60px;
+}
+
+.nav-title{
+	font-size: 1em;
+	text-align: center;
+	line-height: 1.8em;
+	margin: 16px 0px;
 }
 
 .nav-header{
@@ -190,6 +204,7 @@ h6{
 	cursor: pointer;
 	border-radius: 3px;
 	position: relative;
+	outline: 0;
 }
 
 .btn-block{
@@ -198,26 +213,71 @@ h6{
 	text-align: center;
 }
 
-.btn-white{
+.btn-default{
 	color: #444;
 	background-color: #f2f2f2;
-	border: 1px solid #ccc;
+	border: 1px solid #bbb;
 }
 
-.btn-white:active{
+.btn-default:active, .btn-default.active{
+	color: #666;
 	background-color: #ccc;
+	border: 1px solid #888;
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.btn-blue{
+.btn-confirm{
 	color: #fff;
 	background-color: #2967CA;
 	border: 1px solid #1554BA;
 }
 
-.btn-blue:active{
+.btn-confirm:active, .btn-confirm.active{
 	color: #f2f2f2;
 	background-color: #1554BA;
+	border: 1px solid #0F397C;
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
+
+.btn-accept{
+	color: #fff;
+	background-color: #23C711;
+	border: 1px solid #1DB029;
+}
+
+.btn-accept:active, .btn-accept.active{
+	color: #f2f2f2;
+	background-color: #1DB029;
+	border: 1px solid #0E7316;
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.btn-wait{
+	color: #fff;
+	background-color: #DF9B21;
+	border: 1px solid #C28314;
+}
+
+.btn-wait:active, .btn-wait.active{
+	color: #f2f2f2;
+	background-color: #C28314;
+	border: 1px solid #885C10;
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.btn-warning{
+	color: #fff;
+	background-color: #D34523;
+	border: 1px solid #BA3515;
+}
+
+.btn-warning:active, .btn-warning.active{
+	color: #f2f2f2;
+	background-color: #BA3515;
+	border: 1px solid #812711;
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
 
 /* COLORS */
 
