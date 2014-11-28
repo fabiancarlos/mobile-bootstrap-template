@@ -1,5 +1,5 @@
 
-# PHONEGAP Bootstrap Template
+# Mobile Bootstrap Template
 
 The objective is create features in HTML5 like on native mobile. Considering on performance or beauty.
 
