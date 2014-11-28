@@ -29,6 +29,10 @@ body{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	-webkit-overflow-scrolling: none;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 

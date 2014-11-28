@@ -1,10 +1,18 @@
 
+/* Fix, when open interface, go to the top */
+window.scroll(0,0);
+
 /***
 	* List Nodes
 ***/
 
 var nav_section_node_list = document.getElementsByClassName('nav-section'),
     section_content_node_list = document.getElementsByClassName('content-section');
+
+/* Prevent Touch Move*/
+for (var i = 0; i < nav_section_node_list.length; ++i){
+	nav_section_node_list[i].ontouchmove = function(e){ e.preventDefault(); }
+}
 
 /***
 	* Screen Size
@@ -16,8 +24,24 @@ var w = window,
     g = d.getElementsByTagName('body')[0],
     screen_width = w.innerWidth || e.clientWidth || g.clientWidth,
     screen_height = w.innerHeight|| e.clientHeight|| g.clientHeight;
+var reload_get_screen_size = function(){
+	  w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    screen_width = w.innerWidth || e.clientWidth || g.clientWidth,
+    screen_height = w.innerHeight|| e.clientHeight|| g.clientHeight;
+}
 
 console.log(screen_width + ' × ' + screen_height);
+
+window.onresize = function(event) {
+	reload_get_screen_size();
+
+	console.log(screen_width + ' × ' + screen_height);
+
+  apply_section_content_height();
+}
 
 /***
 	* IOS
@@ -54,6 +78,9 @@ var section_content = section_content_node_list[0];
 
 /* Only one section content */
 if (section_content_node_list.length > 1) alert("You have more than one section content!");
+
+/* Enable only section content to more */
+section_content.ontouchmove = function(e){ return true; }
 
 var apply_section_content_height = function(){
 	var count_nav_section = nav_section_node_list ? nav_section_node_list.length : 0;
