@@ -136,7 +136,9 @@ h6{
 /* ITEM */
 
 .item{
-	padding: 10px 13px;
+	display: inline-table;
+	width: 100%;
+	padding: 8px 13px;
 }
 
 .block .item-text{
@@ -156,9 +158,9 @@ h6{
 }
 
 .item-separator{
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: 800;
-	line-height: 1.6em;
+	line-height: 1em;
 	color: #222;
 	background: #eee;
 }
@@ -188,19 +190,57 @@ h6{
 	height: auto;
 }
 
+
+/* ICONS */
+
+i.icon:before,
+b.icon:before,
+u.icon:before,
+strong.icon:before,
+li.icon:before,
+span.icon:before,
+div.icon:before,
+em.icon:before,
+small.icon:before{
+	display: inline;
+	padding: 5px 12px;
+	pointer-events: none;
+	content: " ";
+	width:25px;
+	height:25px;
+}
+
+i.icon:before,
+b.icon:before,
+u.icon:before,
+strong.icon:before,
+li.icon:before,
+span.icon:before,
+div.icon:before,
+em.icon:before,
+small.icon:before{
+	display: inline-block;
+	margin: 7px;
+}
+
+.icon-home:before{
+	background: url('mobile-bootstrap-sprites.png') no-repeat no-repeat 0px 0px;
+	background: url('mobile-bootstrap-sprites.svg') no-repeat no-repeat 0px 0px;
+}
+
 /* BUTTONS */
 
 .btn{
 	display: inline-block;
 	font-size: 1em;
 	font-weight: 200;
-	line-height: 40px;
+	line-height: 38px;
 	color: #444;
 	background-color: transparent;
 	margin: 0;
 	padding: 0 12px;
 	min-width: 50px;
-	min-height: 40px;
+	min-height: 38px;
 	vertical-align: top;
 	text-align: center;
 	text-overflow: ellipsis;
@@ -210,13 +250,82 @@ h6{
 	outline: 0;
 }
 
+.btn-block.icon:before{
+	display: inline;
+	margin-right: 4px;
+	padding: 2px 12px;
+	padding-top: 3px;
+	pointer-events: none;
+}
+
 .btn-block{
 	display: block;
 	width: 100%;
-	text-align: center;
+	clear: both;
 }
 
-.btn-default{
+/* fix pull text when class icon */
+.btn-block.icon-right{
+	position: relative;
+	text-indent: 10px;
+}
+.btn-block.icon-right:before{
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+.btn-block.icon-left{
+	position: relative;
+}
+.btn-block.icon-left:before{
+	position: absolute;
+	top: 2px;
+	left: 8px;
+}
+
+/* icon on buttons */
+.btn.icon:before{
+	display: inline;
+	padding: 2px 12px;
+	pointer-events: none;
+	content: " ";
+	width:25px;
+	height:25px;
+}
+
+.btn.btn-default.icon.icon-left:before,
+.btn.btn-confirm.icon.icon-left:before,
+.btn.btn-accept.icon.icon-left:before,
+.btn.btn-wait.icon.icon-left:before,
+.btn.btn-warning.icon.icon-left:before{
+	float: left;
+	display: inline;
+	margin-top: 6px;
+	margin-right: 4px;
+	pointer-events: none;
+	content: " ";
+	width:25px;
+	height:25px;
+}
+
+.btn.btn-default.icon.icon-right:before,
+.btn.btn-confirm.icon.icon-right:before,
+.btn.btn-accept.icon.icon-right:before,
+.btn.btn-wait.icon.icon-right:before,
+.btn.btn-warning.icon.icon-right:before{
+	float: right;
+	display: inline;
+	margin-top: 6px;
+	margin-left: 4px;
+	margin-right: 0px;
+	pointer-events: none;
+	content: " ";
+	width:25px;
+	height:25px;
+}
+
+.btn-default,
+.btn-default:hover{
 	color: #444;
 	background-color: #f2f2f2;
 	border: 1px solid #bbb;
@@ -229,7 +338,8 @@ h6{
 	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.btn-confirm{
+.btn-confirm,
+.btn-confirm:hover{
 	color: #fff;
 	background-color: #2967CA;
 	border: 1px solid #1554BA;
@@ -242,7 +352,8 @@ h6{
 	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.btn-accept{
+.btn-accept,
+.btn-accept:hover{
 	color: #fff;
 	background-color: #23C711;
 	border: 1px solid #1DB029;
@@ -255,7 +366,8 @@ h6{
 	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.btn-wait{
+.btn-wait,
+.btn-wait:hover{
 	color: #fff;
 	background-color: #DF9B21;
 	border: 1px solid #C28314;
@@ -268,7 +380,8 @@ h6{
 	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.btn-warning{
+.btn-warning,
+.btn-warning:hover{
 	color: #fff;
 	background-color: #D34523;
 	border: 1px solid #BA3515;
@@ -280,7 +393,6 @@ h6{
 	border: 1px solid #812711;
 	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.35);
 }
-
 
 /* COLORS */
 
@@ -321,6 +433,7 @@ h6{
 .opacity-6{
 	opacity: 0.6;
 }
+
 
 /* RESET */
 
